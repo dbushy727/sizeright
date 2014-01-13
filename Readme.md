@@ -1,1 +1,4 @@
-# Welcome to SizeRight
+sizeright
+=========
+
+My first WDI Project
