@@ -1,0 +1,9 @@
+<form action="/sneaker" method="POST">
+
+<input type="text" name="base_size" placeholder="10"/>
+<input type="text" name="brand_name" placeholder="Nike"/>
+<button>submit</button>
+<input name="authenticity_token" 
+                  type="hidden" 
+                  value="<%= form_authenticity_token %>" />
+</form>

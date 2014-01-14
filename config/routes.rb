@@ -1,4 +1,14 @@
 Project1::Application.routes.draw do
+
+  devise_for :users
+
+  resources :sneaker
+
+  get '/sneaker/params[:brand_name]/params[:base_size]' => 'sneaker#mysneakers'
+
+  root :to => 'sneaker#new'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
