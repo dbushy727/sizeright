@@ -2,17 +2,21 @@ class SneakerController < ApplicationController
   
 
   def index
+
     @sneakers = Sneaker.where(id: session[:sneaker_ids])
   end
 
   def create
 
+
     @brand_name = params[:brand_name]
     @base_size = params[:base_size].to_f
     session[:sneaker_ids] = []
     @brands = Brand.all
+
       case @brand_name
         when "Puma"
+
           @base_size = @base_size - 0.5
         when "Converse"
           @base_size = @base_size + 0.5
@@ -32,6 +36,13 @@ class SneakerController < ApplicationController
   end
 
   def new
+  end
+
+  def show
+    @id = params[:id]
+    @brand = Brand.find(@id)
+    @amazon_info = Amazoninfo.where(brand_id: @id).to_a
+
   end
 
 

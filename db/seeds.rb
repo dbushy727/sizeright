@@ -7,13 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-# req = Vacuum.new
-# req.configure(
-
-#   aws_access_key_id: 'AKIAIYQA6IYPMV7GU32A',
-#   aws_secret_access_key: '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',
-#   associate_tag: 'sizeright_dbushy727-20'
-#   )
 
 
 b1 = Brand.new(name: "Nike", conversion: 0)
@@ -39,3 +32,15 @@ b7.save
 b8.save
 b9.save
 b10.save
+
+sneaker = Sneaker.connect
+brands = Brand.all
+
+brands.each do |brand|
+  params = {'SearchIndex' => 'Shoes', 'Brand' => brand.name}
+  items = sneaker.item_search(params).to_h["ItemSearchResponse"]["Items"]["Item"]
+  items.each do |item|
+    asin = item["ASIN"]
+    Amazoninfo.create(asin: asin, brand_id: brand.id, brand_name: brand.name, title: item["ItemAttributes"]["Title"])
+  end
+end

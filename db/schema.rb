@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140114140335) do
+ActiveRecord::Schema.define(:version => 20140115003525) do
+
+  create_table "amazoninfos", :force => true do |t|
+    t.string   "asin"
+    t.integer  "brand_id"
+    t.string   "brand_name"
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "brands", :force => true do |t|
     t.string "name"

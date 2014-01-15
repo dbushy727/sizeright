@@ -1,0 +1,7 @@
+<h1><%=@brand.name%></h1>
+<% @amazon_info.each do |amazon| %>
+
+<a href="http://www.amazon.com/gp/product/<%=amazon.asin%>/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=<%=amazon.asin%>&linkCode=as2&tag=size05d-20"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=<%=amazon.asin%>&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=size05d-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=size05d-20&l=as2&o=1&a=<%=amazon.asin%>" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+<p><%=amazon.title%></p>
+<%end%>
