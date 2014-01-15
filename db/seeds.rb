@@ -6,8 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
-
+Brand.delete_all
+Sneaker.delete_all
+Amazoninfo.delete_all
 
 b1 = Brand.new(name: "Nike", conversion: 0)
 b2 = Brand.new(name: "Adidas", conversion: 0)
