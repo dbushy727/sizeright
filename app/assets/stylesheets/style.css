@@ -1,0 +1,80 @@
+
+.black {
+   text-align: center;
+   color: red;
+
+}
+
+.my_form {
+  
+  width: 373px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+/*.logo_size {
+  width: 100%;
+  text-align: center;
+}*/
+
+.logos {
+  float: left;
+  text-align: center;
+  height: 300px;
+  width: 300px;
+
+}
+
+.index_page {
+  margin-top: 40px;
+}
+
+.sneaker {
+  float: left;
+  height: 300px;
+  width: 200px;
+}
+
+.sneaker img {
+  width: 100px;
+  height: 50px;
+}
+
+.brand_name {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 225px;
+  color: red;
+}
+.brand_name1 {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 390px;
+  color: red;
+}
+
+iframe.single_ad {
+  margin-left: 120px;
+}
+
+.best_sellers {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.root_ads {
+  float: left;
+  padding: 10px;
+
+}
+
+

@@ -1,27 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project1</title>
+
+  <title>SizeRight</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  
 </head>
 <body>
+<!-- BOOTSTRAP HEADER -->
+<div id="wrap">
 
-<nav>
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container" style="position:relative;">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="#">SizeRight</a> -->
+          </div>
+          <div class="collapse navbar-collapse">
+            <% if current_user %>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="#about">About</a></li>
 
-  <% if current_user %>
-    Welcome, <%= current_user.email%> | <%= link_to "Logout", destroy_user_session_path, :method => :delete %></a> | <a href="/">Home</a>
-  <% else %>
-    <%= link_to "Register", new_user_registration_path%> | <%= link_to "Sign-In", new_user_session_path%> | <a href="/">Home</a>
-    <% end %>
-</nav>
+              <li><a><%=current_user.email%></a></li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></a></li>
+                
+                  <% else %>
+                  <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/users/sign_up">Register</a></li>
+              <li><a href="/users/sign_in">Sign In</a></li>
+              
+
+                  <% end %>
+                </ul>
+              </li>
+            </ul>
+            <% if current_user%>
+                <span class="brand_name1"><h3>SizeRight</h3></span>
+                <%else%>
+                <span class="brand_name"><h3>SizeRight</h3></span>
+                <%end%>
 
 
-<!-- <p class = “notice”><%= notice %></p> -->
-<p class = “alert”><%= alert %></p>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
 
-<%= yield %>
+      <!-- Begin page content -->
+      <div class="container">
+        <%= yield %>
+        <!-- <div class="page-header">
+          <h1>Sticky footer with fixed navbar</h1>
+        </div>
+        <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added within <code>#wrap</code> with <code>padding-top: 60px;</code> on the <code>.container</code>.</p>
+        <p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p> -->
+      </div>
+</div>
+
+<!-- BOOTSTRAP STICKY-FOOTER -->
+<div id="footer">
+  <div class="container">
+    <p class="text-muted" style="text-align: right;">SizeRight &copy 2013</p>
+  </div>
+</div>
+
+
 
 </body>
 </html>
