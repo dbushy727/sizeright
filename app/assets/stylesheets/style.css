@@ -34,6 +34,7 @@ img {
   float: left;
   height: 300px;
   width: 200px;
+  padding-right: 50px;
 }
 
 .sneaker img {
@@ -83,15 +84,14 @@ iframe.single_ad {
 }
 
 .background_form {
-  position: absolute;
   height: 130px;
   width: 500px;
   z-index: -1;
   background-color:rgba(100,100,100,.4);
-  bottom: 475px;
-  left: 400px;
   border: 3px solid #B00000 ;
   border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 .index_page p {
@@ -99,12 +99,32 @@ iframe.single_ad {
 }
 
 .ad_banner{
-  position: absolute;
   width: 468px;
   margin-left: 350px;
-  bottom: -80px;
 }
 
 .best_seller {
   padding-right: 50px;
+}
+
+@media (max-width: 767px) { 
+  .ad {
+    display: none;
+  }
+.form-inline.my_form {
+    margin-top: 6px;
+  }
+  .brand_name1 h3 {
+    margin-left: 210px;
+  }
+}
+
+@media (max-width: 1200px) { 
+  .ad_banner {
+    display: none;
+  }
+  .single_ad {
+    display: none;
+  }
+  
 }
