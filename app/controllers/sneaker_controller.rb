@@ -4,6 +4,10 @@ class SneakerController < ApplicationController
   def index
 
     @sneakers = Sneaker.where(id: session[:sneaker_ids])
+    @sneaker_ad1 = Amazoninfo.all.shuffle.pop.asin
+    @sneaker_ad2 = Amazoninfo.all.shuffle.pop.asin
+    @sneaker_ad3 = Amazoninfo.all.shuffle.pop.asin
+    @sneaker_ad4 = Amazoninfo.all.shuffle.pop.asin
   end
 
   def create
@@ -36,6 +40,12 @@ class SneakerController < ApplicationController
   end
 
   def new
+    @sneaker_ad1 = Amazoninfo.all.shuffle.pop.asin
+    @sneaker_ad2 = Amazoninfo.all.shuffle.pop.asin
+    @sneaker_ad3 = Amazoninfo.all.shuffle.pop.asin
+    @sneaker_ad4 = Amazoninfo.all.shuffle.pop.asin
+    @sneaker_ad5 = Amazoninfo.all.shuffle.pop.asin
+    @sneaker_ad6 = Amazoninfo.all.shuffle.pop.asin
   end
 
   def show
