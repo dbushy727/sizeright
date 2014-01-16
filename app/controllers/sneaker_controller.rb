@@ -11,16 +11,12 @@ class SneakerController < ApplicationController
   end
 
   def create
-
-
     @brand_name = params[:brand_name]
     @base_size = params[:base_size].to_f
     session[:sneaker_ids] = []
     @brands = Brand.all
-
       case @brand_name
         when "Puma"
-
           @base_size = @base_size - 0.5
         when "Converse"
           @base_size = @base_size + 0.5
@@ -31,7 +27,6 @@ class SneakerController < ApplicationController
         when "Saucony"
           @base_size = @base_size + 0.5
       end
-
     @brands.each do |brand|
       session[:sneaker_ids] << Sneaker.create(base_size: @base_size, brand_name: brand.name, brand_id: brand.id, shoe_size: @base_size + brand.conversion).id
     end
@@ -40,12 +35,17 @@ class SneakerController < ApplicationController
   end
 
   def new
-    @sneaker_ad1 = Amazoninfo.all.shuffle.pop.asin
-    @sneaker_ad2 = Amazoninfo.all.shuffle.pop.asin
-    @sneaker_ad3 = Amazoninfo.all.shuffle.pop.asin
-    @sneaker_ad4 = Amazoninfo.all.shuffle.pop.asin
-    @sneaker_ad5 = Amazoninfo.all.shuffle.pop.asin
-    @sneaker_ad6 = Amazoninfo.all.shuffle.pop.asin
+    @all_shoes = Amazoninfo.all.shuffle
+    @best_seller1 = @all_shoes.pop
+    @best_seller2 = @all_shoes.pop
+    @best_seller3 = @all_shoes.pop
+    @best_seller4 = @all_shoes.pop
+    @best_seller5 = @all_shoes.pop
+    @best_seller6 = @all_shoes.pop
+    @best_seller7 = @all_shoes.pop
+    @best_seller8 = @all_shoes.pop
+    @best_seller9 = @all_shoes.pop
+    @best_seller10 = @all_shoes.pop
   end
 
   def show

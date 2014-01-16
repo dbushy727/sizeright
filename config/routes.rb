@@ -8,6 +8,9 @@ Project1::Application.routes.draw do
 
   root :to => 'sneaker#new'
 
+  get '/about' => 'home#about'
+  get '/contact' => 'home#contact'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

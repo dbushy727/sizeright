@@ -1,0 +1,11 @@
+Thu, 16 Jan 2014 09:24:50 -0500
+doc/README_FOR_APP	Tue, 14 Jan 2014 16:29:21 -0500
+app/controllers/application_controller.rb	Tue, 14 Jan 2014 16:29:21 -0500
+app/controllers/home_controller.rb	Tue, 14 Jan 2014 16:29:21 -0500
+app/controllers/sneaker_controller.rb	Thu, 16 Jan 2014 08:51:25 -0500
+app/controllers/user_controller.rb	Tue, 14 Jan 2014 16:29:21 -0500
+app/helpers/application_helper.rb	Tue, 14 Jan 2014 16:29:21 -0500
+app/models/amazoninfo.rb	Tue, 14 Jan 2014 20:45:06 -0500
+app/models/brand.rb	Tue, 14 Jan 2014 19:33:32 -0500
+app/models/sneaker.rb	Tue, 14 Jan 2014 20:45:02 -0500
+app/models/user.rb	Tue, 14 Jan 2014 16:29:21 -0500
