@@ -2,13 +2,13 @@
   <% @sneakers.each do |sneaker| %>
   <div class="logos">
     <% unless sneaker.brand_name == "New Balance"%>
-    <a href="/sneaker/<%=sneaker.brand.id%>"><img src="/logos/<%=sneaker.brand_name%>-logo.jpg"</img></a>
+      <a href="/sneaker/<%=sneaker.brand.id%>"><img src="/logos/<%=sneaker.brand_name%>-logo.jpg"></img></a>
         <br>
         <br>
       <p>Size: <%=sneaker.shoe_size%></p>
       
     <% else %>
-      <a href="/sneaker/<%=sneaker.brand.id%>"><img src="/logos/newbalance-logo.jpg"</img></a>
+      <a href="/sneaker/<%=sneaker.brand.id%>"><img src="/logos/newbalance-logo.jpg"></img></a>
         <br>
         <br>
       <p>Size: <%=sneaker.shoe_size%></p>
