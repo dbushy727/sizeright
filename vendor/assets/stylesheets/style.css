@@ -131,6 +131,9 @@ iframe.single_ad {
   .brand_name1 h3 {
     margin-left: 210px;
   }
+  .brand_name h3 {
+    margin-left: 210px;
+  }
 }
 
 @media (max-width: 1200px) { 
