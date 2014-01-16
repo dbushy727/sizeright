@@ -58,13 +58,13 @@ img {
 .brand_name {
   display: block;
   text-align: center;
-  margin-right: 225px;
+  margin-right: 215px;
   color: #B00000;
 }
 .brand_name1 {
   display: block;
   text-align: center;
-  margin-right: 228px;
+  margin-right: 143px;
   color: #B00000;
 }
 
@@ -129,10 +129,10 @@ iframe.single_ad {
     margin-top: 6px;
   }
   .brand_name1 h3 {
-    margin-left: 210px;
+    margin-left: 155px;
   }
   .brand_name h3 {
-    margin-left: 210px;
+    margin-left: 195px;
   }
 }
 
@@ -145,3 +145,4 @@ iframe.single_ad {
   }
   
 }
+
