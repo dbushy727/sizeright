@@ -57,12 +57,14 @@ img {
 
 .brand_name {
   display: block;
+  font-family: "Abril Fatface", cursive;
   text-align: center;
   margin-right: 215px;
   color: #B00000;
 }
 .brand_name1 {
   display: block;
+  font-family: "Abril Fatface", cursive;
   text-align: center;
   margin-right: 143px;
   color: #B00000;
@@ -130,11 +132,11 @@ iframe.single_ad {
   }
   .brand_name1 h3 {
     margin-left: 155px;
-    font-family: 'Abril Fatface', cursive;
+    
   }
   .brand_name h3 {
     margin-left: 195px;
-    font-family: 'Abril Fatface', cursive;
+    
   }
 }
 
@@ -158,6 +160,6 @@ iframe.single_ad {
   color: #fffeee;
 }
 .navbar-default .navbar-nav > li > a:hover {
-  color: white'
+  color: white;
 }
 

@@ -1,5 +1,5 @@
 #SizeRight Readme
-A shopping tool to help you find your sneaker size across all major brands.
+A shopping tool to help you find your sneaker size across major brands.
 
 
 [SizeRight](http://sizeright.herokuapp.com)
@@ -23,7 +23,7 @@ Users enter their current sneaker size and brand.
 
 Brings up images of different brands with corresponding sizes appended to them. 
 
-Users can click on an image to view top sneakers selling sneakers on amazon for respective brand. Image is a link and takes you to that item on amazon.
+Users can click on an image to view top selling sneakers through amazon for respective brand. Image is a link and takes you to that item on amazon.
 ###Code Sample
 ```
 def create
