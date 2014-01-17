@@ -1,5 +1,6 @@
+
 #SizeRight Readme
-A shopping tool to help you find your sneaker size across major brands.
+A shopping tool to help you find your sneaker size across different major brands.
 
 
 [SizeRight](http://sizeright.herokuapp.com)
