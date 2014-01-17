@@ -25,9 +25,7 @@
               <% end %>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6">
-              <button class="btn btn-lg btn-info btn-block" style="font-color:white;">
-                <%= render "devise/shared/links" %> 
-              </button>
+                <%= button_to "Sign In", new_session_path(resource_name), method: :get, :class => "btn btn-lg btn-info btn-block" %>
             </div>
           </div>
         </fieldset>
