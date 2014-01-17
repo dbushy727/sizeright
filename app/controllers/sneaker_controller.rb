@@ -2,7 +2,6 @@ class SneakerController < ApplicationController
   
 
   def index
-
     @sneakers = Sneaker.where(id: session[:sneaker_ids])
     @sneaker_ad1 = Amazoninfo.all.shuffle.pop.asin
     @sneaker_ad2 = Amazoninfo.all.shuffle.pop.asin
@@ -14,11 +13,11 @@ class SneakerController < ApplicationController
     @brand_name = params[:brand_name]
     @base_size = params[:base_size].to_f
     size = @base_size.to_s.split(".").last.to_i
-    if (size == 5 || size == 0) && @base_size < 18
 
+    if (size == 5 || size == 0) && @base_size < 18
       session[:sneaker_ids] = []
       @brands = Brand.all
-        case @brand_name
+      case @brand_name
           when "Puma"
             @base_size = @base_size - 0.5
           when "Converse"
@@ -29,12 +28,13 @@ class SneakerController < ApplicationController
             @base_size = @base_size - 0.5
           when "Saucony"
             @base_size = @base_size + 0.5
-        end
+      end
+
       @brands.each do |brand|
         session[:sneaker_ids] << Sneaker.create(base_size: @base_size, brand_name: brand.name, brand_id: brand.id, shoe_size: @base_size + brand.conversion).id
       end
-
       redirect_to sneaker_index_path
+
     else
        render text: "You Entered an Invalid Size. Please Go Back and Try Again."
     end
@@ -58,7 +58,6 @@ class SneakerController < ApplicationController
     @id = params[:id]
     @brand = Brand.find(@id)
     @amazon_info = Amazoninfo.where(brand_id: @id).to_a
-
   end
 
 
