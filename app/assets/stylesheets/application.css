@@ -12,5 +12,5 @@
  *= require bootstrap
  *= require bootstrap-theme
  *= require sticky-footer
- *= require style
+ *= require_tree .
  */
